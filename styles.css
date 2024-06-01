@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(300, 57%, 86%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 3rem 5% 3rem 5%;
+}
+
+.main-article div {
+    background-image: url('/images/jew\ 2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+article div {
+    background-color: rgb(231, 182, 231);
+    border-radius: 10px;
+    margin: 0px 5px;
+}
+
+div {
+    padding: 10px 10px 20px 20px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    padding-top: 1rem;
+}
+
+header>img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav {
+    background-color: rgb(231, 182, 231);
+    border-radius: 20px;
+    text-align: center;
+}
+
+nav ul {
+    margin-top: 1rem;
+    padding: 0px 10p;
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+a:hover{
+    color:purple;
+    transition: ease-in-out;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: 0px 10px;
+}
+
+section {
+    padding-top: 2rem;
+    display: flex;
+}
+
+article {
+    flex: 1;
+}
+
+footer {
+    align-items: center;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
