@@ -1,16 +1,17 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: hsl(300, 57%, 86%);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 3rem 5% 3rem 5%;
+    margin: 3rem 5%;
 }
 
 .main-article div {
-    background-image: url('/images/jew\ 2.jpg');
+    background-image: url('/images/jew 2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 20px;
@@ -20,73 +21,160 @@ article div {
     background-color: rgb(231, 182, 231);
     border-radius: 10px;
     margin: 0px 5px;
+    padding: 10px 10px 20px 20px;
+    transition: transform 0.3s ease-in-out;
 }
 
-div {
-    padding: 10px 10px 20px 20px;
+article div:hover {
+    transform: scale(1.05);
 }
 
 h1 {
     font-size: 3rem;
+    animation: fadeIn 2s ease-in-out;
 }
 
 h2 {
     font-size: 2rem;
+    animation: fadeIn 2s ease-in-out;
 }
 
 p {
     padding-top: 1rem;
 }
 
-header>img {
+header img.logo {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    animation: slideIn 1s ease-in-out;
 }
 
 nav {
     background-color: rgb(231, 182, 231);
     border-radius: 20px;
     text-align: center;
+    margin: 1rem 0;
 }
 
 nav ul {
-    margin-top: 1rem;
-    padding: 0px 10p;
+    padding: 1rem 0;
     list-style: none;
-    text-align: center;
 }
 
 nav li {
     display: inline-block;
-}
-
-a:hover{
-    color:purple;
-    transition: ease-in-out;
+    margin: 0 1rem;
 }
 
 a {
     text-decoration: none;
     color: black;
-    padding: 0px 10px;
+    padding: 0 10px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: purple;
 }
 
 section {
     padding-top: 2rem;
     display: flex;
+    flex-wrap: wrap;
 }
 
 article {
-    flex: 1;
+    flex: 1 1 calc(33.333% - 2rem);
+    margin: 1rem;
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.article-image:hover {
+    transform: scale(1.05);
 }
 
 footer {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-footer div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.footer-logo {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 2rem 2%;
+    }
+
+    nav ul {
+        padding: 0.5rem 0;
+    }
+
+    nav li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    article {
+        flex: 1 1 100%;
+        margin: 0.5rem 0;
+    }
+
+    header img.logo {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin: 1rem 1%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
 }
